@@ -18,7 +18,8 @@ class UsuarioController extends Controller
 
     public function __construct(){
 
-       $this->beforeFilter('@find',['only' => ['edit', 'update','destroy']]);
+       //$this->beforeFilter('@find',['only' => ['edit', 'update','destroy']]);
+       $this->middleware('@find' , ['only' => ['edit', 'update','destroy'] ]);
 
     }
     public function find($route){
