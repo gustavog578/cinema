@@ -37,13 +37,13 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
-      protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at'];
 
-    public function setPasswordAttribute($valor){
-        if(!empty($valor)){
-             $this->attributes['password'] = \Hash::make($valor);
+    public function setPasswordAttribute($valor)
+    {
+        if (!empty($valor)) {
+            $this->attributes['password'] = \Hash::make($valor);
         }
     }
 
 }
-
