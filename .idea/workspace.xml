@@ -655,7 +655,7 @@
       <option name="presentableId" value="Default" />
       <updated>1480596186621</updated>
       <workItem from="1480596194896" duration="18720000" />
-      <workItem from="1480681098586" duration="9411000" />
+      <workItem from="1480681098586" duration="9455000" />
     </task>
     <task id="LOCAL-00001" summary="Nuevas migraciones">
       <created>1480682526036</created>
@@ -671,11 +671,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480691913607</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix blade edit">
+      <created>1480691946439</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1480691946439</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28131000" />
+    <option name="totallyTimeSpent" value="28175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -715,7 +722,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Nuevas migraciones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nuevas migraciones" />
+    <MESSAGE value="Fix blade edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix blade edit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
