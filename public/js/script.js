@@ -1,8 +1,9 @@
 $("#registro").click(function(){
 	var dato = $("#genre").val();
-	var route = "/genero";
+	var route = '../genero';
 	var token = $("#token").val();
-
+	console.log(route);
+	console.log(dato);
 	$.ajax({
 		url: route,
 		headers: {'X-CSRF-TOKEN': token},
@@ -16,7 +17,31 @@ $("#registro").click(function(){
 		error:function(msj){
 			$("#msj").html(msj.responseJSON.genre);
 			$("#msj-error").fadeIn();
-			
+
 		}
 	});
 });
+
+$("#registroIdioma").click(function(){
+
+	var data = $("#idioma").val();
+	var route = '../idioma';
+	var token = $("#token").val();
+	$ajax({
+		url : route,
+		headers: {'X-CSRF-TOKEN': token},
+		type: 'POST',
+		dataType: 'json',
+		data:{idioma: data},
+
+		success:function(){
+			$("#msj-success").fadeIn();
+		},
+		error:function(){
+			$("#msj").html(msj.responseJSON.idioma);
+			$("#msj-error").fadeIn();
+		}
+
+	})
+
+})

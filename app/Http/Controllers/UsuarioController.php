@@ -67,6 +67,7 @@ class UsuarioController extends Controller
      */
     public function store(UserCreateRequest $request)
     {
+        //$this->validate($request, ['']); VALIDAR
         User::create($request->all());
         Session::flash('message', 'Usuario creado con exito');
         return Redirect::to('/usuario');
@@ -119,7 +120,7 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-       $this->user->delete();
+       $this->user->delete($id);
        Session::flash('message', 'Usuario Eliminado con exito');
         return Redirect::to('/usuario');
     }

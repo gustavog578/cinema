@@ -9,6 +9,7 @@
 				<th>Correo</th>
 				<th>Operacion</th>
 			</thead>
+
 			@foreach($users as $user)
 				<tbody>
 					<td>{{$user->name}}</td>

@@ -26,7 +26,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Cinema Admin</a>
+                <a class="navbar-brand" href="index.html"> Learn Language </a>
             </div>
            
 
@@ -62,13 +62,13 @@
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-film fa-fw"></i> Pelicula<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-film fa-fw"></i> Items <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/pelicula/create"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="{!!URL::to('/pelicula/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
-                                    <a href="/pelicula"><i class='fa fa-list-ol fa-fw'></i> Peliculas</a>
+                                    <a href="{!!URL::to('/pelicula')!!}"><i class='fa fa-list-ol fa-fw'></i> Items Lista</a>
                                 </li>
                             </ul>
                         </li>
@@ -77,10 +77,22 @@
                             <a href="#"><i class="fa fa-child fa-fw"></i> Genero<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/genero/create"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="{!!URL::to('/genero/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
-                                    <a href="/genero"><i class='fa fa-list-ol fa-fw'></i> Generos</a>
+                                    <a href="{!!URL::to('/genero')!!}"><i class='fa fa-list-ol fa-fw'></i> Generos</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-language fa fw"></i>  Idiomas <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{!!URL::to('/idioma/create')!!}"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                </li>
+                                <li>
+                                    <a href="{!!URL::to('/idioma')!!}"><i class='fa fa-list-ol fa-fw'></i> Idiomas</a>
                                 </li>
                             </ul>
                         </li>
