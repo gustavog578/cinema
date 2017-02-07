@@ -6,6 +6,11 @@ use cinema\Http\Controllers\Controller;
 use cinema\Http\Requests\GenreRequest;
 use cinema\Genre;
 use Illuminate\Routing\Route;
+//header('Content-type: application/json; charset=utf-8');
+//session_write_close();        // Para que me permita hacer request simultáneos
+
+
+
 class GeneroController extends Controller
 {
     public function __construct(){
@@ -16,15 +21,9 @@ class GeneroController extends Controller
     }
     /**
      * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Request $request)
+    */
+    public function index()
     {
-        if ($request->ajax()) {
-            $genres = Genre::all();
-            return response()->json($genres);
-        }
         return view('genero.index');
     }
     /**
@@ -69,7 +68,10 @@ class GeneroController extends Controller
      */
     public function edit($id)
     {
+
+        //return view('genero.modal');
         return response()->json($this->genre);
+
     }
     /**
      * Update the specified resource in storage.
@@ -78,7 +80,7 @@ class GeneroController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $this->genre->fill($request->all());
         $this->genre->save();
@@ -95,4 +97,13 @@ class GeneroController extends Controller
         $this->genre->delete();
         return response()->json(["mensaje"=>"borrado"]);
     }
+
+    public function listing(){
+
+        return Genre::all();
+
+
+    }
+
+
 }

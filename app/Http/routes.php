@@ -12,15 +12,22 @@
 */
 
 Route::get('/', 'FrontController@index');
-Route::get('contacto', 'FrontController@contacto');
+Route::get('contact', 'FrontController@contacto');
 Route::get('reviews', 'FrontController@reviews');
 Route::get('admin','FrontController@admin');
 
 Route::resource('usuario','UsuarioController');
+
 Route::resource('genero', 'GeneroController');
+Route::get('genero/store', 'GeneroController@store');
 Route::get('generos', 'GeneroController@listing');
 
 Route::resource('pelicula','MovieController');
+
+Route::resource('idioma', 'IdiomaController');
+Route::get('idioma/store', 'IdiomaController@store');
+
+
 
 Route::resource('log', 'LogController');
 Route::get('logout', 'LogController@logout');

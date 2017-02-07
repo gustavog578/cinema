@@ -17,7 +17,14 @@ class MovieController extends Controller
      */
     public function index()
     {
-      // return "desde index";
+       $movies = Movie::paginate(2);
+
+        /* if($request->ajax()){
+            return response()->json(view('pelicula.peliculas',compact('movies'))->render());
+        }
+        */
+
+        return view('pelicula.index',compact('movies'));
     }
 
     /**

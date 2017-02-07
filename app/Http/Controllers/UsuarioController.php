@@ -16,10 +16,13 @@ use Illuminate\Routing\Route;
 class UsuarioController extends Controller
 {
 
+    /**
+     * UsuarioController constructor.
+     */
     public function __construct(){
 
-       //$this->beforeFilter('@find',['only' => ['edit', 'update','destroy']]);
-       $this->middleware('@find' , ['only' => ['edit', 'update','destroy'] ]);
+       $this->beforeFilter('@find',['only' => ['edit', 'update','destroy']]);
+       //$this->middleware('@find' , ['only' => ['edit', 'update','destroy'] ]);
 
     }
     public function find($route){
@@ -64,6 +67,7 @@ class UsuarioController extends Controller
      */
     public function store(UserCreateRequest $request)
     {
+        //$this->validate($request, ['']); VALIDAR
         User::create($request->all());
         Session::flash('message', 'Usuario creado con exito');
         return Redirect::to('/usuario');
@@ -89,6 +93,7 @@ class UsuarioController extends Controller
     public function edit($id)
     { 
         $user = User::find($id);
+
         return view('usuario.edit',['user'=> $this->user]);
     }
 
@@ -115,7 +120,7 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-       $this->user->delete();
+       $this->user->delete($id);
        Session::flash('message', 'Usuario Eliminado con exito');
         return Redirect::to('/usuario');
     }
